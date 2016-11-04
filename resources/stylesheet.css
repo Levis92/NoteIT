@@ -21,6 +21,9 @@ header {
         header div a {
           font-size: 1.5rem;
           margin-top: 30px; } }
+      @media only screen and (max-width: 500px) {
+        header div a {
+          margin-top: 30px; } }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
       header div {
         font-size: 1.5rem; } }
