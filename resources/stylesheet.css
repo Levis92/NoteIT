@@ -7,9 +7,12 @@ h1 {
   margin-bottom: 0 !important; }
 
 header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
   margin-top: 0;
   padding-bottom: 7px;
-  background-color: rgba(0, 169, 211, 0.7);
+  background-color: rgba(0, 169, 211, 0.95);
   color: white !important; }
   header div {
     margin-top: 15px;
@@ -31,8 +34,13 @@ header {
         font-size: 1.5rem; } }
 
 main {
+  z-index: 1;
+  position: relative;
+  top: 12rem;
   margin: auto;
   max-width: 800px; }
+  main hr {
+    margin: 15px 0; }
   main div.chevron-icon {
     position: relative;
     top: 50%;
@@ -45,7 +53,7 @@ main {
     margin: auto;
     margin-top: 10px;
     padding: 5px 15px;
-    border-left: 2px solid rgba(0, 169, 211, 0.7); }
+    border-left: 2px solid rgba(0, 169, 211, 0.95); }
     main div.course-content div.course-file {
       margin-top: 5px;
       font-size: 1.2rem; }

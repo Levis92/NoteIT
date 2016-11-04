@@ -1,4 +1,4 @@
-$IT-blue: rgba(0,169,211,0.7)
+$IT-blue: rgba(0,169,211,0.95)
 $mobile-media: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)"
 
 body
@@ -11,6 +11,9 @@ h1
 	margin-bottom: 0 !important
 
 header
+	position: fixed
+	z-index: 10
+	width: 100%
 	margin-top: 0
 	padding-bottom: 7px
 	background-color: $IT-blue
@@ -32,8 +35,13 @@ header
 			font-size: 1.5rem
 			
 main
+	z-index: 1
+	position: relative
+	top: 12rem
 	margin: auto
 	max-width: 800px
+	hr
+		margin: 15px 0 
 	div.chevron-icon
 		position: relative
 		top: 50%
