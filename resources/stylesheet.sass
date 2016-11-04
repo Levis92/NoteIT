@@ -50,6 +50,7 @@ main
 		float: right
 		margin-right: 15px
 	div.course-content
+		display: none
 		width: 95%
 		margin: auto
 		margin-top: 10px
@@ -62,7 +63,14 @@ main
 				font-size: 2rem
 				@media #{$mobile-media}
 					font-size: 1.5rem
+	
 
+#course-toggle-1
+	&:checked ~ div#course-content-1
+		display: block
+	&:checked ~ #toggle-icon-1
+		display: block
+		transform: rotate(90deg)
 
 
 
