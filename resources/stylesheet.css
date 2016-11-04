@@ -4,8 +4,7 @@ body {
   margin: 0; }
 
 h1 {
-  position: relative;
-  top: 10px; }
+  margin-bottom: 0 !important; }
 
 a {
   color: white !important; }
@@ -18,6 +17,8 @@ header {
   header div {
     margin-top: 15px;
     white-space: nowrap; }
+    header div div {
+      margin-top: 5px; }
     header div a {
       float: right;
       font-size: 2rem;
