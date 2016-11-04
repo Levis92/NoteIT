@@ -1,0 +1,28 @@
+$IT-blue: rgba(0,169,211,0.7)
+$mobile-media: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)"
+
+body
+	font:
+		family: "Helvetica Neue", sans-serif
+		size: 2.1rem !important
+	margin: 0
+
+a
+	color: white !important
+
+header
+	margin-top: 0
+	padding-bottom: 7px
+	background-color: $IT-blue
+	color: white !important
+	div
+		white-space: nowrap
+		margin-top: 10px
+		a
+			float: right
+			font-size: 2rem
+			@media #{$mobile-media}
+				font-size: 1.5rem
+		@media #{$mobile-media}
+			font-size: 1.5rem
+			
