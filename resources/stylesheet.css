@@ -39,35 +39,61 @@ main {
   top: 12rem;
   margin: auto;
   max-width: 800px; }
+  main details {
+    width: 100%;
+    margin: 0; }
+    main details:hover {
+      cursor: pointer; }
+    main details[open] > div {
+      animation: dropdown 0.5s 1; }
+    main details ul {
+      list-style: none; }
+    main details summary:focus, main details summary:active {
+      outline: 0; }
   main hr {
     margin: 15px 0; }
   main div.chevron-icon {
     position: relative;
     top: 50%;
     transform: translateY(50%); }
-  main i.chevron-icon {
-    float: right;
-    margin-right: 15px; }
-  main div.course-content {
-    display: none;
+    main div.chevron-icon i.chevron-icon {
+      float: right;
+      margin-right: 15px; }
+      main div.chevron-icon i.chevron-icon:hover {
+        cursor: pointer; }
+    main div.chevron-icon i#toggle-icon-1 {
+      transition: transform 0.5s; }
+  main ul.course-content {
     width: 95%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-left: 25px;
     padding: 5px 15px;
     border-left: 2px solid rgba(0, 169, 211, 0.95); }
-    main div.course-content div.course-file {
+    main ul.course-content div.course-file {
       margin-top: 5px;
       font-size: 1.2rem; }
-      main div.course-content div.course-file a {
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+        main ul.course-content div.course-file {
+          font-size: 1rem; } }
+      main ul.course-content div.course-file a {
         font-size: 2rem; }
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-          main div.course-content div.course-file a {
-            font-size: 1.5rem; } }
+          main ul.course-content div.course-file a {
+            font-size: 1.4rem; } }
 
 #course-toggle-1:checked ~ div#course-content-1 {
-  display: block; }
-#course-toggle-1:checked ~ #toggle-icon-1 {
   display: block;
-  transform: rotate(90deg); }
+  animation: dropdown 0.5s 1; }
+#course-toggle-1:checked ~ .row .chevron-icon i#toggle-icon-1 {
+  transform: rotate(-90deg); }
+
+@keyframes dropdown {
+  from {
+    transform: rotateX(-90deg);
+    transform-origin: top; }
+  to {
+    transform: rotateX(0deg);
+    transform-origin: top; } }
 
 /*# sourceMappingURL=stylesheet.css.map */

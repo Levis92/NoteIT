@@ -33,46 +33,68 @@ header
 				margin-top: 30px
 		@media #{$mobile-media}
 			font-size: 1.5rem
-			
+
 main
 	z-index: 1
 	position: relative
 	top: 12rem
 	margin: auto
 	max-width: 800px
+	details
+		width: 100%
+		margin: 0
+		&:hover
+			cursor: pointer
+		&[open] > div
+			animation: dropdown 0.5s 1
+		ul
+			list-style: none
+		summary
+			&:focus, &:active
+				outline: 0
 	hr
-		margin: 15px 0 
+		margin: 15px 0
 	div.chevron-icon
 		position: relative
 		top: 50%
 		transform: translateY(50%)
-	i.chevron-icon
-		float: right
-		margin-right: 15px
-	div.course-content
-		display: none
+		i.chevron-icon
+			float: right
+			margin-right: 15px
+			&:hover
+				cursor: pointer
+		i#toggle-icon-1
+			transition: transform 0.5s
+	ul.course-content
 		width: 95%
 		margin: auto
-		margin-top: 10px
+		margin-top: 50px
+		margin-left: 25px
 		padding: 5px 15px
 		border-left: 2px solid $IT-blue
 		div.course-file
 			margin-top: 5px
 			font-size: 1.2rem
+			@media #{$mobile-media}
+				font-size: 1rem
 			a
 				font-size: 2rem
 				@media #{$mobile-media}
-					font-size: 1.5rem
-	
+					font-size: 1.4rem
+
 
 #course-toggle-1
-	&:checked ~ div#course-content-1
-		display: block
-	&:checked ~ #toggle-icon-1
-		display: block
-		transform: rotate(90deg)
+	&:checked
+		~ div#course-content-1
+			display: block
+			animation: dropdown 0.5s 1
+		~ .row .chevron-icon i#toggle-icon-1
+			transform: rotate(-90deg)
 
-
-
-
-
+@keyframes dropdown
+	from
+		transform: rotateX(-90deg)
+		transform-origin: top
+	to
+		transform: rotateX(0deg)
+		transform-origin: top
